@@ -149,10 +149,15 @@ header{
     
 }
 
-@media (max-width: 700px) {
+@media (max-width: 650px) {
     .nav li {
         display: flex;
         flex-direction: column;
+        text-align: center;
+        display: none;
+    }
+
+    h1 {
         text-align: center;
     }
 
@@ -300,6 +305,14 @@ hr {
 #bold{
     font-weight: bold;
 }
+
+.div-section {
+    color: #17a2b8;
+    width: 500px;
+    border: 3px solid var(--color-secundario);
+    border-radius: 10px;
+}
+
 
 /*Formulario*/
 
