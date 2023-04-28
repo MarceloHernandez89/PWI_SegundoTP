@@ -64,8 +64,8 @@ header{
     flex-flow: row wrap;
     justify-content:center;
     background-image: url(img/img4.png);
-    background-size:auto;
-    background-position: -5px 700px;
+    background-size:cover;
+
       
 }
 
@@ -82,39 +82,9 @@ header{
     position: relative;
     top: 50px;
 }
+ 
 
-@media (max-width: 1050px) {
-    .foto_perfil {
-       margin: auto; 
-      /*display: none;*/
-    }
-    .box{
-        height: 700px;
-        display:grid;
-    }
 
-    .nav {
-        justify-content: center;
-       
-    }
-
-    .nav a {
-        font-size: 14px;
-    }
-
-    .sobre_mi {
-        margin: auto;
-        padding: auto;
-        width: auto;
-        height: auto;
-    }
-} 
-
-.titulo {
-    position: relative;
-    right: 0%;    
-    top: 0%;
-}
 
 .titulo h1{
     display: flex;
@@ -126,14 +96,12 @@ header{
     top: 40%;
 }
 
-
-
 .icons {
     display: flex;    
     justify-content: center;
     position: relative;
     top: 45%;
-
+    
 }
 
 .icons li{
@@ -145,17 +113,56 @@ header{
     align-items: center;
 }
 
-.icons li:hover{
+.ico {
+    text-decoration: none;
+    text-transform:uppercase;
+    color: #e0ebed;
+}
+
+.ico:hover{
    color:var(--color-secundario);
 }
 
+@media (max-width: 1050px) {
+    .foto_perfil {
+       margin: auto; 
+      /*display: none;*/
+    }
 
+    .box{
+        height: 700px;
+        display:grid;
+    }
+
+    .nav {
+        justify-content: center;
+       
+    }
+
+    
+    .sobre_mi {
+        margin: auto;
+        padding: auto;
+        width: auto;
+        height: auto;
+    }
+    
+}
+
+@media (max-width: 700px) {
+    .nav li {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
 
 /*Main*/
 
-main {
+/* main {
     background: linear-gradient(to top left, rgb(75, 75, 75), white);
-}
+} */
 
 main h2{
     font-size: 24px;
@@ -176,7 +183,13 @@ main h2{
     text-align:center;
     
 }   
+@media (max-width: 1050px) {
+    .sobre_mi{
+        width: auto;
 
+    }
+    
+}
 
 /*Sección Estudios*/
 .section-estudios{
@@ -228,20 +241,37 @@ main h2{
 }
 
 
+.box-estudios:hover{
+    background-color:#e0ebed;
+    font-size: 17px;
+    
+}
+
+
+
+
 /*Sección experiencia*/
 .experiencia{
     margin: 70px;
 }
+
 .container{
     width: 60%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: auto auto;
+    padding: 20px;
+}
+
+.container h4{
+    font-weight: bold;
+    
 }
 
 .trabajo{
     text-align: center;
-    padding: 30px;
+    line-height: 20px;
+    margin: 40px;
 }
 
 .anho {
@@ -249,7 +279,7 @@ main h2{
 	height: 60px;
 	border-radius: 50%;
 	background: var(--color-secundario);
-    margin: 15px;
+    margin-top: 40px;
 	display: flex;
 	justify-content: center;
 
@@ -260,8 +290,16 @@ main h2{
     
 }
 
+hr {
+    color: #17a2b8;
+    width: 100px;
+    border: 3px solid var(--color-secundario);
+    border-radius: 10px;
+}
 
-
+#bold{
+    font-weight: bold;
+}
 
 /*Formulario*/
 
