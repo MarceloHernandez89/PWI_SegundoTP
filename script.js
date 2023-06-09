@@ -5,10 +5,10 @@ function addDataToTable() {
   var table = document.getElementById('dataTable');
   var tbody = document.getElementById('dataBody');
 
-  // Clear the table body
+  // Limpia la tabla.
   tbody.innerHTML = '';
 
-  // Add data rows to the table
+  // Agrega filas a la tabla.
   for (var i = 0; i < data.length; i++) {
     var row = document.createElement('tr');
     var rowData = data[i];
@@ -25,6 +25,7 @@ function addDataToTable() {
   }
 }
 
+// Ordena la tabla segun el campo seleccionado.
 function sortTable(column) {
   if (sortOrder[column] === 'asc') {
     sortOrder[column] = 'desc';
@@ -90,20 +91,18 @@ document.addEventListener('DOMContentLoaded', function() {
       // Obtener la referencia del elemento de alerta
     const alertElement = document.getElementById('confirmationMessage');
 
-    // Ocultar o eliminar la alerta después de 3 segundos (3000 milisegundos)
+    // Elimina la alerta después de 3 segundos
     setTimeout(function() {
-      alertElement.remove(); // Eliminar la alerta
-    // Opcionalmente, puedes ocultar la alerta en lugar de eliminarla
-    // alertElement.style.display = 'none';
+      alertElement.remove(); //
     }, 3000);
 
-    if (montoARS < 100) {
+    if (montoARS < 180.000) {
       // Si el monto es menor a 100, no se agrega a la tabla
       return false;
     }
 
-    var montoUSD = montoARS / 100; // Conversión simple a dólares (1 USD = 100 ARS)
-    var montoEUR = montoUSD * 0.92; // Conversión aproximada a euros (1 EUR ≈ 0.92 USD)
+    var montoUSD = montoARS / 245; // Conversión a dólares.
+    var montoEUR = montoARS / 263.52; // Conversión a euros.
 
     var rowData = [nombre, email, telefono, comentario, montoARS, montoUSD, montoEUR];
     data.push(rowData);
