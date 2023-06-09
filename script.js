@@ -25,7 +25,7 @@ function addDataToTable() {
   }
 }
 
-// Ordena la tabla segun el campo seleccionado.
+// Ordena la tabla según el campo seleccionado.
 function sortTable(column) {
   if (sortOrder[column] === 'asc') {
     sortOrder[column] = 'desc';
@@ -88,16 +88,46 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Mostrar el mensaje de confirmación
     confirmationMessage.style.display = 'block';
-      // Obtener la referencia del elemento de alerta
+    // Obtener la referencia del elemento de alerta
     const alertElement = document.getElementById('confirmationMessage');
 
-    // Elimina la alerta después de 3 segundos
+    // Eliminar la alerta después de 3 segundos
     setTimeout(function() {
-      alertElement.remove(); //
+      alertElement.remove();
     }, 3000);
 
-    if (montoARS < 180.000) {
-      // Si el monto es menor a 100, no se agrega a la tabla
+    if (nombre === '') {
+      alert('Por favor, ingrese un nombre.');
+      return false;
+    }
+
+    if (email === '') {
+      alert('Por favor, ingrese un correo electrónico.');
+      return false;
+    }
+
+    if (!validaEmail(email)) {
+      alert('Por favor, ingrese un correo electrónico válido. Ejemplo: juan@perez.com');
+      return false;
+    }
+
+    if (telefono === '') {
+      alert('Por favor, ingrese un número de teléfono.');
+      return false;
+    }
+
+    if (!validaTel(telefono)) {
+      alert('Por favor, ingrese un número de teléfono válido (10 numeros). Ejemplo: 1123456789');
+      return false;
+    }
+
+    if (comentario === '') {
+      alert('Por favor, ingrese un comentario.');
+      return false;
+    }
+
+    if (montoMin(montoARS) || montoARS < 180000) {
+      alert('Por favor, ingrese un monto válido mayor o igual a 180,000. Ejemplo: 200000');
       return false;
     }
 
@@ -112,3 +142,15 @@ document.addEventListener('DOMContentLoaded', function() {
     return false;
   });
 });
+
+function validaEmail(email) {
+  // Validación simple para verificar un formato de correo electrónico válido.
+  var emailRegex = /\S+@\S+\.\S+/;
+  return emailRegex.test(email);
+}
+
+function validaTel(phone) {
+  // Validación simple para verificar un número de teléfono válido.
+  var phoneRegex = /^\d{10}$/;
+  return phoneRegex.test(phone);
+}
