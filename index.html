@@ -1,170 +1,254 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" autor="Marcelo Hernandez" content="Primer entrega Programación Web I, Universidad Nacional del Oeste. Proyecto curriculum web.">
-    <link rel="stylesheet" href="reset.css"> <!--reset.css -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" autor="Marcelo Hernandez"
+        content="gunda entrega de Programación Web I, Universidad Nacional del Oeste. Proyecto curriculum web, validaciones con Js e implementación de Bootstrap.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css"> <!--Estilos del curriculum-->
     <script src="https://kit.fontawesome.com/0f6107854b.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
     <title>Marcelo Hernandez - Cv</title>
 </head>
+
 <body>
-    <header>
-        <!--Contenedor menú de navegación-->
-        <div class="nav">
-            <nav>      
-                <ul>
-                <li><a id="home" href="#">Home</a></li>
-                <li><a href="#sobre_mi">Sobre mi</a></li>
-                <li><a href="#estudios">Estudios</a></li>
-                <li><a href="#experiencia">Experiencia</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header class="container-fluid bg-dark d-flex justify-content-center">
+        <p class="text-white m-0 fw-bold fs-3 p-3">Marcelo Hernandez CV</p>
     </header>
-    <section>
-        <!--Contenedor portada-->
-        <div class="box">
-            <!--Contenedor foto de perfil-->
-            <div class="foto_perfil">
-                <img src="img/perfil.jpg" >
-            </div>
-            <!--Contenedor titulo ppal. y redes-->
-            <div class="titulo">  
-                <h1>MARCELO HERNANDEZ</h1>
-                <div class="icons">
-                    <ul>
-                        <li><a class="ico" href="https://es-la.facebook.com/" target="_blank"><i class="fa-brands fa-facebook" ></i></a></li>   
-                        <li><a class="ico" href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></a></i></li>
-                        <li><a class="ico" href="https://twitter.com/?lang=es" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
-                        <li><a class="ico" href="https://ar.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
-                        <li><a class="ico" href="https://discord.com/" target="_blank"><i class="fa-brands fa-discord"></i></a></li>
-                        <li><a class="ico" href="https://github.com/MarceloHernandez89/Proyecto-Web-UNO.git"  target="_blank"><i class="fa-brands fa-github"></i></a></li>
-                    </ul>
-                </div>
+    <!--Menu de navegacion-->
+    <nav id="menu" class="navbar navbar-expand-lg bg-body-tertiary sticky-top p-2 fw-bold">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold"><i class="fa-solid fa-code "></i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav fs-5 me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" id="home" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#sobre_mi">Sobre mi</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#estudios">Estudios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
+                        <li class="nav-item"><a class="nav-link" href="formulario.html" target="_blank">Contacto</a></li>
+                    </ul>              
             </div>
         </div>
-    </section>
+    </nav>
+    <!--Portada-->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div id="carousel" class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+                <img src="img/p1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/2.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+    </div>
     <main>
-        <!--Contenido del Curriculum-->
-        <section class="box_main">        
-            <!--Acerca de mi-->
-            <div class="sobre_mi">
-                    <h2 id="sobre_mi">Sobre mi</h2>
-                    <p>Mi nombre es Marcelo Hernandez, y desde el año 2010 me desempeño en el ámbito del monitoreo satelital, especificamente en la gestión de herramientas digitales para el seguimiento de buques pesqueros que operan en los espacios marítimos de jurisdicción nacional y adyacencias. En mi desarrollo personal y profesional he ido capacitandome de manera autodidacta en distintos aspectos de la programación, tanto en la lógica como en el uso de distintos lenguajes, de lo que cabe aclarar, me encuentro en vías de aprendizaje. Me considero una persona capaz y entusiasta por adquirir nuevos conocimientos.</p>
-            </div>
-            <hr class="div-section">
-            <!--Estudios-->
-            <div class="section-estudios">
-                <h2 id="estudios">Estudios</h2>
-                    <div class="estudios">
-                    <div class="box-estudios">
-                        <h3>Nivel Secundario</h3>
-                        <p class="inst">E.E.M N° 12 "Cataratas del Iguazú"</p>
-                        <p>Técnico en Informatica Profesional y Personal</p>
-                        <p>Egresado en el año 2007.</p>
-                    </div>
-                    <div class="box-estudios">
-                        <h3>Formación de grado</h3>                   
-                        <p class="inst">Universidad Nacional del Oeste.</p> 
-                        <p>Técnicatura Universitaria en Tecnologias Web</p>
-                        <p>Cursando en el año 2023</p>
-                    </div>
-                    <div class="box-estudios">
-                        <h3>Seminario</h3>
-                        <p class="inst">TradeBytes Data Corp.</p>
-                        <p>Técnicas de Analisis para el dominio Marítimo</p>
-                        <p>Realizado en el año 2022</p>
-                    </div>
-                    <div class="box-estudios">
-                        <h3>Curso de Operador Básico de Microsistemas</h3>
-                        <p class="inst">Escuela Superior de Informática PNA</p>
-                        <p>Realizado en el año 2022</p>
-                    </div>
-                    <div class="box-estudios">
-                        <h3>Curso de Lógica en Programación</h3>
-                        <p class="inst">Oracle Next Education</p>
-                        <p>Realizado en el año 2023</p>
-                    </div>
-                    <div class="box-estudios">
-                        <h3>Curso Teledeteción Óptica</h3>
-                        <p class="inst">Comisión Nacional de Actividades Espaciales</p>
-                        <p>Cursando en el año 2023</p>
-                    </div>  
-                </div>        
-            </div>
-            <hr class="div-section">
-            <!--Contenedor Experiencia-->
-            <div class="experiencia">
-                <!--Experiencia-->
-                <h2 id="experiencia">Experiencia</h2>
-                <div class="experiencia-container">
-                    <div class="container">
-                        <div class="anho"> 
-                            <p>2007</p>
-                        </div>
-                        <div class="trabajo"> 
-                            <h4>JUMBO RETAIL S.A.</h4>
-                            <p>Desde el año 2007 hasta el año 2008 realizando tareas de atención al cliente y operador en linea de cajas.</p>
-                        </div>
-                    </div> 
-                    <hr> 
-                    <div class="container">
-                        <div class="anho"> 
-                            <p>2008</p>
-                        </div>
-                        <div class="trabajo"> 
-                            <h4>SC JOHNSON A FAMILY COMPANY</h4>
-                            <p>Desde el año 2008 hasta el año 2009 realizando tareas de operario en lineas de embalaje y control de calidad.</p>    
-                        </div>
-                    </div> 
-                    <hr>   
-                    <div class="container">
-                        <div class="anho"> 
-                            <p>2009</p>
-                        </div>
-                        <div class="trabajo"> 
-                            <h4>DIVISIÓN DE SEGURIDAD PUERTO MADERO</h4></strong>
-                            <p>Desde el año 2009 hasta el año 2010 realizando tareas de seguridad pública.</p>
-                        </div>
-                    </div> 
-                    <hr> 
-                    <div class="container">
-                        <div class="anho">  
-                            <p>2010</p>
-                        </div>
-                        <div class="trabajo"> 
-                            <h4>DEPARTAMENTO POLICÍA AUXILIAR PESQUERA</h4></strong>
-                            <p>Desde el año 2010 a la actualidad desempeñandome como operador de monitoreo satelital.</p>
-                            <p>Manejo de plataformas como <b id="bold">SeaSearcher</b>, <b id="bold">Global Fishin Watch</b> y <b id="bold">Skylight</b>.</p>
-                        </div>
-                    </div>                        
+        <section class="container-fluid p-4 d-flex justify-content-center align-items-center">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 p-3 d-flex justify-content-center align-items-center">
+                    <img src="img/perfil.jpg" class="rounded-circle" width="300" alt="...">
+                </div>
+                <div class="col-lg-8 col-md-12 p-4 d-flex flex-column justify-content-center align-items">
+                    <h2 id="sobre_mi" class="fw-bold fs-2 text-lg-start text-center ">Sobre mi  </h2>
+                    <p id="presentacion" class="fs-5">Mi nombre es <span class="fw-bold">Marcelo Hernandez</span> , y
+                        desde el año 2010 me desempeño en el ámbito del monitoreo satelital, especificamente en la
+                        gestión de herramientas digitales para el seguimiento de buques pesqueros que operan en los
+                        espacios marítimos de jurisdicción nacional y adyacencias. En mi desarrollo personal y
+                        profesional he ido capacitandome de manera autodidacta en distintos aspectos de la programación,
+                        tanto en la lógica como en el uso de distintos lenguajes, de lo que cabe aclarar, me encuentro
+                        en vías de aprendizaje. Me considero una persona capaz y entusiasta por adquirir nuevos
+                        conocimientos.</p>
                 </div>
             </div>
         </section>
-        <section>
-            <!--Contenedor Formulario-->         
-            <form class="formulario">
-                    <h2 id="contacto">Contactame</h2>
-                    <div class="contenedor-campos">
-                        <input id="nombre" type="text" placeholder="Nombre" maxlength="20" type="reset">
-                        <input type="email" placeholder="Email">   
-                        <input  type="tel" placeholder="Teléfono">        
-                        <textarea placeholder="Escribeme aquí..."></textarea>
-                        <div class="enviar">
-                            <input href="home" type="reset" value="Enviar">
-                        </div>  
-            </form>
+        <div class="container-fluid d-flex justify-content-center align-items-center">
+            <hr class="border-primary border-5 w-50 rounded">
+        </div>
+        <section class="container-md d-flex flex-column justify-content-center align-items">
+            <h2 id="estudios" class="fw-bold fs-2 text-center mt-3">Estudios y capacitaciones</h2>
+            <div class="row row-cols-md-1  justify-content-center">
+                <div class="card m-2" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4 d-flex justify-content-center align-items-center p-3">
+                            <img src="img/media12.jpg" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body tex-justify">
+                                <h5 class="card-title fw-bold">E.E.M N° 12 "Cataratas del Iguazú</h5>
+                                <p class="card-text">Nivel secundario</p>
+                                <p class="card-text m-0">"Técnico en Informatica Profesional y Personal"</p>
+                                <p class="card-text"><small class="text-body-secondary">Egresado en el año 2007</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card m-2" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4 d-flex justify-content-center align-items-center p-3">
+                            <img src="img/uno.png" class="img-fluid rounded-start mw-auto" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Universidad Nacional del Oeste</h5>
+                                <p class="card-text">Formación de grado</p>
+                                <p class="card-text m-0">"Técnicatura Universitaria en Tecnologías Web"</p>
+                                <p class="card-text"><small class="text-body-secondary">Cursando en la
+                                        actualidad</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card m-2" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4 d-flex justify-content-center align-items-center p-3">
+                            <img src="img/trade.jpg" class="img-fluid rounded-start mw-auto" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">TradeBytes Data Corp</h5>
+                                <p class="card-text">Seminario</p>
+                                <p class="card-text m-0">"Técnicas de Analisis para el dominio Marítimo"</small></p>
+                                <p class="card-text"><small class="text-body-secondary">Realizado en el año 2022</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card m-2" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4 d-flex justify-content-center align-items-center p-3">
+                            <img src="img/esin.jpg" class="img-fluid rounded-start mw-auto" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Escuela superior de informática PNA</h5>
+                                <p class="card-text">Capacitación</p>
+                                <p class="card-text m-0">"Curso Operador Básico de Microsistemas"</p>
+                                <p class="card-text"><small class="text-body-secondary">Realizado en el año 2022</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card m-2" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4 d-flex justify-content-center align-items-center p-3">
+                            <img src="img/oracle.jpg" class="img-fluid rounded-start mw-auto" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Oracle Next Education</h5>
+                                <p class="card-text">Curso de Lógica en Programación</p>
+                                <p class="card-text m-0">Curso modalidad virtual, mediante plataforma ALURA LATAM</p>
+                                <p class="card-text"><small class="text-body-secondary">Realizado en el año 2023</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container-fluid d-flex justify-content-center align-items-center">
+            <hr class="border-primary border-5 w-50 rounded">
+        </div>
+        <!--Contenedor Experiencia-->
+        <section id="experiencia" class="container-fluid">
+            <h2 class="fw-bold fs-2 text-center mb-5 m-3">Experiencia laboral</h2>
+            <div id="carouselExampleDark" class="carousel carousel-dark slide text-center mb-1">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner mb-5">
+                    <div class="carousel-item active mb-5" data-bs-interval="10000">
+                        <div class="trabajo">
+                            <h4 class="fw-bold">JUMBO RETAIL S.A.</h4>
+                            <p class="m-0 fs-5">Desde el año 2007 hasta el año 2008 realizando tareas de atención al
+                                cliente y operador
+                                en linea de cajas.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item mb-5" data-bs-interval="2000">
+                        <div class="trabajo">
+                            <h4 class="fw-bold">SC JOHNSON A FAMILY COMPANY</h4>
+                            <p class="m-0 fs-5">Desde el año 2008 hasta el año 2009 realizando tareas de operario en
+                                lineas de embalaje y control de calidad.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item mb-5" data-bs-interval="2000">
+                        <div class="trabajo">
+                            <h4 class="fw-bold">DIVISIÓN DE SEGURIDAD PUERTO MADERO</h4>
+                            <p class="m-0 fs-5">Desde el año 2009 hasta el año 2010 realizando tareas de seguridad
+                                pública.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item mb-5" data-bs-interval="2000">
+                        <div class="trabajo">
+                            <h4 class="fw-bold">DEPARTAMENTO POLICÍA AUXILIAR PESQUERA</h4>
+                            <p class="m-0 fs-5">Desde el año 2010 a la actualidad desempeñandome como operador de
+                                monitoreo satelital.
+                            <p>Manejo de plataformas como <span class="fw-bold fs-5">SeaSearcher</span>,<span
+                                    class="fw-bold fs-5"> Global Fishing
+                                    Watch </span>y<span class="fw-bold fs-5"> Skylight</span>.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </section>
     </main>
-    <!--Contenedor footer-->
-    <footer>
-        <div class="footer">
-            <p>Todos los derechos reservados.</p>
-            <p>&copy;Copyright 2023.</p>   
+    <footer class="container-fluid bg-dark p-3">
+        <div class="row">
+            <div class="col">
+                <div>
+                    <p class="text-white m-0 fw-bold fs-6">Todos los derechos reservados.</p>
+                    <p class="text-white m-0 fw-bold fs-6">&copy; Copyright 2023.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="d-flex justify-content-end fs-4">
+                    <a class="ico" href="https://es-la.facebook.com/" target="_blank"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a class="ico" href="https://www.instagram.com/" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a class="ico" href="https://twitter.com/?lang=es" target="_blank"><i
+                            class="fa-brands fa-twitter"></i></a>
+                    <a class="ico" href="https://ar.linkedin.com/" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a class="ico" href="https://discord.com/" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                    <a class="ico" href="https://github.com/MarceloHernandez89/ProyectoWEB2.git" target="_blank"><i
+                            class="fa-brands fa-github"></i><a>
+                </div>
+            </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
 </body>
 </html>

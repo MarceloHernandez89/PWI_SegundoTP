@@ -1,27 +1,9 @@
-/*Menú*/
-[id]{
-    scroll-margin-top: 90px;
-}
-
-#menu{
-    background-color:rgb(200, 228, 238) !important;
-}
-
-#menu a {
-    
-}
-#menu a:hover{
-    color: dodgerblue !important;
+#carousel{
+    max-height: 28rem !important ;
 }
 
 #presentacion{
     text-align: justify;
-}
-
-/*Estudios y experiencia*/
-#experiencia{
-    height: 300px;
-    align-items: center;
 }
 
 .card:hover{
@@ -29,41 +11,55 @@
     transform: scale(1.03);
 }
 
-#carousel{
-    max-height: 28rem !important ;
-}
-
-
-/*Iconos*/
 .icons li{
     margin: 10px;
     display: inline;
     width: 20px;
     font-size: 40px;
     color: var(--blanco);
+    align-items: center;
 }
 
 .ico {
-    margin: 0px 7px 0px 7px;
     text-decoration: none;
     text-transform:uppercase;
     color: #e0ebed;
 }
 
 .ico:hover{
-   color:cornflowerblue;
+   color:var(--color-secundario);
 }
+
+#experiencia{
+    
+    height: 300px;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*Estilos de tabla*/
 .container {
     margin-top: 50px;
-  }
-
-  input{
-    height: 50px;
-    border-color:black;
-    border-radius: 10px; 
   }
   
   .form-group {
@@ -77,11 +73,11 @@
   .table {
     margin-top: 20px;
   }
-
+  
   .sortable {
     cursor: pointer;
   }
-
+  
   .sort-asc::after,
   .sort-desc::after {
     content: '▼';
