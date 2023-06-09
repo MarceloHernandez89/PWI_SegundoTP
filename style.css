@@ -7,9 +7,6 @@
     background-color:rgb(200, 228, 238) !important;
 }
 
-#menu a {
-    
-}
 #menu a:hover{
     color: dodgerblue !important;
 }
@@ -63,7 +60,6 @@
 
   input{
     height: 50px;
-    border-color:black;
     border-radius: 10px; 
   }
   

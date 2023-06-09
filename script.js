@@ -79,16 +79,16 @@ document.addEventListener('DOMContentLoaded', function() {
     var comentario = document.getElementById('comentario').value;
     var montoARS = parseFloat(montoInput.value);
 
-    // Limpiar los campos
+    // Limpia los campos
     document.getElementById('nombre').value = '';
     document.getElementById('email').value = '';
     document.getElementById('telefono').value = '';
     document.getElementById('comentario').value = '';
     montoInput.value = '';
 
-    // Mostrar el mensaje de confirmación
+    // Muestra el mensaje de confirmación
     confirmationMessage.style.display = 'block';
-    // Obtener la referencia del elemento de alerta
+    
     const alertElement = document.getElementById('confirmationMessage');
 
     // Eliminar la alerta después de 3 segundos
