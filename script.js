@@ -106,8 +106,8 @@ document.addEventListener('DOMContentLoaded', function() {
       return false;
     }
 
-    if (!validaEmail(email)) {
-      alert('Por favor, ingrese un correo electrónico válido. Ejemplo: juan@perez.com');
+    if (!isValidEmail(email)) {
+      alert('Por favor, ingrese un correo electrónico válido. Ejemplo: correo@example.com');
       return false;
     }
 
@@ -116,8 +116,8 @@ document.addEventListener('DOMContentLoaded', function() {
       return false;
     }
 
-    if (!validaTel(telefono)) {
-      alert('Por favor, ingrese un número de teléfono válido (10 numeros). Ejemplo: 1123456789');
+    if (!isValidPhone(telefono)) {
+      alert('Por favor, ingrese un número de teléfono válido. Ejemplo: 1234567890');
       return false;
     }
 
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
       return false;
     }
 
-    if (montoMin(montoARS) || montoARS < 180000) {
+    if (isNaN(montoARS) || montoARS < 180000) {
       alert('Por favor, ingrese un monto válido mayor o igual a 180,000. Ejemplo: 200000');
       return false;
     }
@@ -143,13 +143,13 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-function validaEmail(email) {
+function isValidEmail(email) {
   // Validación simple para verificar un formato de correo electrónico válido.
   var emailRegex = /\S+@\S+\.\S+/;
   return emailRegex.test(email);
 }
 
-function validaTel(phone) {
+function isValidPhone(phone) {
   // Validación simple para verificar un número de teléfono válido.
   var phoneRegex = /^\d{10}$/;
   return phoneRegex.test(phone);
